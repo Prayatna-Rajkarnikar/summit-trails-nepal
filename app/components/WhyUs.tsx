@@ -73,7 +73,7 @@ export default function WhyUs() {
             <motion.div
               key={feature.title}
               variants={fadeInUp}
-              className="rounded-2xl border border-foreground/10 p-8 text-center"
+              className="rounded-2xl border border-foreground/10 p-8 text-center transition-all duration-300 hover:border-accent/40 hover:shadow-[0_0_20px_rgba(201,168,76,0.15)]"
             >
               <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-accent/10 text-accent">
                 {feature.icon}

@@ -68,13 +68,13 @@ export default function Contact() {
               className="cursor-pointer w-full rounded-lg border border-foreground/10 bg-foreground/5 px-4 py-3 text-sm text-foreground focus:border-accent focus:outline-none"
               defaultValue=""
             >
-              <option value="" disabled>
+              <option value="" disabled className="bg-[#0a0a0a] text-foreground">
                 Select a trek
               </option>
-              <option>Everest Base Camp</option>
-              <option>Annapurna Circuit</option>
-              <option>Langtang Valley</option>
-              <option>Custom Trek</option>
+              <option className="bg-[#0a0a0a] text-foreground">Everest Base Camp</option>
+              <option className="bg-[#0a0a0a] text-foreground">Annapurna Circuit</option>
+              <option className="bg-[#0a0a0a] text-foreground">Langtang Valley</option>
+              <option className="bg-[#0a0a0a] text-foreground">Custom Trek</option>
             </select>
           </div>
 

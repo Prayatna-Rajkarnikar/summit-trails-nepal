@@ -107,9 +107,9 @@ function Terrain() {
   return (
     <mesh geometry={geometry} rotation={[-Math.PI / 2.6, 0, 0]} position={[0, -3, -8]}>
       <meshStandardMaterial
-        color="#111111"
-        roughness={0.95}
-        metalness={0.05}
+        color="#080808"
+        roughness={0.92}
+        metalness={0.1}
         flatShading
       />
     </mesh>
@@ -194,7 +194,7 @@ function SnowPeaks() {
       height += Math.sin(x * 2.5 + y * 1.8) * 0.08;
       height += Math.sin(x * 4 + y * 3 + 1.5) * 0.04;
 
-      if (height < 2.0) {
+      if (height < 3.5) {
         positions.setZ(i, -999);
       } else {
         positions.setZ(i, height + 0.03);
@@ -208,9 +208,9 @@ function SnowPeaks() {
   return (
     <mesh geometry={geometry} rotation={[-Math.PI / 2.6, 0, 0]} position={[0, -3, -8]}>
       <meshStandardMaterial
-        color="#f0e8d8"
-        roughness={0.6}
-        metalness={0.0}
+        color="#8a7a5a"
+        roughness={0.7}
+        metalness={0.05}
         flatShading
       />
     </mesh>
@@ -220,33 +220,33 @@ function SnowPeaks() {
 function Lighting() {
   return (
     <>
-      <fog attach="fog" args={["#0a0a0a", 12, 40]} />
-      <ambientLight intensity={0.15} />
+      <fog attach="fog" args={["#050505", 10, 35]} />
+      <ambientLight intensity={0.1} />
 
-      {/* Strong golden key light — raking across faces to show depth */}
+      {/* Key light — subtle gold, raking hard from the side for strong 3D shadows */}
       <directionalLight
-        position={[8, 6, -5]}
-        intensity={2.0}
+        position={[10, 5, -3]}
+        intensity={1.8}
         color="#C9A84C"
         castShadow
       />
 
-      {/* Warm backlight behind peaks */}
+      {/* Dim warm backlight behind peaks */}
       <directionalLight
-        position={[0, 4, -15]}
-        intensity={1.0}
-        color="#d4956b"
+        position={[0, 3, -15]}
+        intensity={0.6}
+        color="#8a6a3a"
       />
 
-      {/* Cool blue fill — opposite side for contrast */}
+      {/* Cool dark fill — opposite side for strong contrast */}
       <directionalLight
-        position={[-10, 3, 3]}
-        intensity={0.4}
-        color="#2a3a5a"
+        position={[-12, 2, 5]}
+        intensity={0.3}
+        color="#1a2a4a"
       />
 
-      {/* Golden rim from below horizon */}
-      <pointLight position={[0, 0, -10]} intensity={0.6} color="#C9A84C" distance={20} />
+      {/* Very subtle rim from below */}
+      <pointLight position={[0, -1, -10]} intensity={0.4} color="#C9A84C" distance={15} />
     </>
   );
 }
@@ -255,7 +255,7 @@ export default function MountainScene() {
   return (
     <div className="absolute inset-0">
       <Canvas
-        camera={{ position: [0, 2, 12], fov: 50, near: 0.1, far: 60 }}
+        camera={{ position: [2, 3, 11], fov: 48, near: 0.1, far: 60 }}
         gl={{ antialias: true, alpha: true }}
         dpr={[1, 1.5]}
         frameloop="demand"

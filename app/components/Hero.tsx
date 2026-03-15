@@ -30,7 +30,7 @@ export default function Hero() {
           <span className="block text-2xl font-medium uppercase tracking-[0.3em] text-white/80 sm:text-3xl md:text-4xl">
             Conquer the
           </span>
-          <span className="block text-7xl font-extrabold text-accent drop-shadow-[0_2px_16px_rgba(201,168,76,0.3)] sm:text-8xl md:text-9xl lg:text-[10rem]">
+          <span className="mt-2 block text-7xl font-extrabold text-accent drop-shadow-[0_2px_16px_rgba(201,168,76,0.3)] sm:mt-3 sm:text-8xl md:text-9xl lg:text-[10rem]">
             Himalayas
           </span>
         </motion.h1>

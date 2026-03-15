@@ -59,9 +59,14 @@ export default function Testimonials() {
                 &ldquo;{t.text}&rdquo;
               </p>
 
-              <div className="mt-6 border-t border-foreground/10 pt-4">
-                <p className="font-medium">{t.name}</p>
-                <p className="text-sm text-foreground/50">{t.country}</p>
+              <div className="mt-6 flex items-center gap-4 border-t border-foreground/10 pt-4">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-accent/15 text-sm font-bold text-accent">
+                  {t.name.split(" ").map((n) => n[0]).join("")}
+                </div>
+                <div>
+                  <p className="font-medium">{t.name}</p>
+                  <p className="text-sm text-foreground/50">{t.country}</p>
+                </div>
               </div>
             </motion.div>
           ))}

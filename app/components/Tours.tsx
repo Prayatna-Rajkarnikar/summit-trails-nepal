@@ -67,6 +67,13 @@ export default function Tours() {
                     {tour.price}
                   </span>
                 </div>
+
+                <a
+                  href="#contact"
+                  className="mt-4 block cursor-pointer rounded-full border border-accent/40 py-2.5 text-center text-sm font-medium uppercase tracking-wider text-accent transition-all hover:bg-accent hover:text-[#0a0a0a]"
+                >
+                  Book This Trek
+                </a>
               </div>
             </motion.div>
           ))}
