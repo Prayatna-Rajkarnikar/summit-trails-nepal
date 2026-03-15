@@ -6,35 +6,35 @@ import { fadeInUp, staggerContainer } from "../lib/animations";
 
 const images = [
   {
-    src: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=800",
-    alt: "Everest Base Camp trek with mountain panorama",
+    src: "https://images.unsplash.com/photo-1600786428316-0d6cc71d5181?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?w=800",
+    alt: "Trekkers crossing a suspension bridge in Nepal",
   },
   {
-    src: "https://images.unsplash.com/photo-1681018755464-1d3495867767?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?w=800",
+    src: "https://images.unsplash.com/photo-1681018755464-1d3495867767?w=800",
     alt: "Annapurna mountain range at sunrise",
   },
   {
-    src: "https://images.unsplash.com/photo-1578709899934-1c5db17fbdb8?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?w=800",
-    alt: "Trekker on a mountain trail in Nepal",
+    src: "https://images.unsplash.com/photo-1753952969735-9be9feb9a217?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    alt: "Trekkers on a Himalayan mountain trail in Nepal",
   },
   {
     src: "https://images.unsplash.com/photo-1486911278844-a81c5267e227?w=800",
     alt: "Prayer flags fluttering in the Himalayan wind",
   },
   {
-    src: "https://images.unsplash.com/photo-1494783367193-149034c05e8f?w=800",
+    src: "https://images.unsplash.com/photo-1762662279649-b65fd2f39118?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?w=800",
     alt: "Mountain village nestled in the Himalayas",
   },
   {
-    src: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800",
-    alt: "Dramatic Himalayan peak shrouded in clouds",
+    src: "https://images.unsplash.com/photo-1746597061227-eb3767a3822a?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    alt: "Nepal mountain landscape with dramatic clouds",
   },
   {
     src: "https://images.unsplash.com/photo-1545652985-5edd365b12eb?w=800",
     alt: "Sherpa guide leading trekkers through Nepal",
   },
   {
-    src: "https://images.unsplash.com/photo-1668332422863-311c79508ddd?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?w=800",
+    src: "https://images.unsplash.com/photo-1668332422863-311c79508ddd?w=800",
     alt: "Glacial lake reflecting snow-capped peaks",
   },
 ];

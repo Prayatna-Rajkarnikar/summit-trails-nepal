@@ -1,25 +1,26 @@
 "use client";
 
+import { Suspense } from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
+import dynamic from "next/dynamic";
+
+const MountainScene = dynamic(() => import("./MountainScene"), { ssr: false });
 
 export default function Hero() {
   return (
     <section className="relative flex h-screen items-center justify-center overflow-hidden">
-      {/* Background image */}
-      <Image
-        src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1920"
-        alt="Snow-capped Himalayan mountain range in Nepal"
-        fill
-        className="object-cover scale-105"
-        priority
-      />
-      {/* Stronger overlay for text contrast */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/70 via-[#0a0a0a]/50 to-[#0a0a0a]" />
-      <div className="absolute inset-0 bg-[#0a0a0a]/20" />
+      {/* Three.js 3D mountain scene */}
+      <Suspense
+        fallback={<div className="absolute inset-0 bg-[#0a0a0a]" />}
+      >
+        <MountainScene />
+      </Suspense>
+
+      {/* Gradient overlay for text readability */}
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/40 via-transparent to-[#0a0a0a]" />
 
       {/* Content */}
-      <div className="relative z-10 mx-auto max-w-5xl px-6 text-center">
+      <div className="relative z-20 mx-auto max-w-5xl px-6 text-center">
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -76,7 +77,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.6 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+        className="absolute bottom-8 left-1/2 z-20 -translate-x-1/2"
       >
         <motion.div
           animate={{ y: [0, 8, 0] }}
